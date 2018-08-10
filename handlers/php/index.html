@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            external_plugins:
+                {
+                    'saveToPdf': 'https://cdn.rawgit.com/Api2Pdf/api2pdf.tinymce/master/save-to-pdf/dist/save-to-pdf/plugin.js'
+                },
+            toolbar: 'saveToPdf',
+            saveToPdfHandler: '/php/savetopdf.php'
+    });
+    </script>
+</head>
+<body>
+    <textarea>Testing saveToPdf</textarea>
+</body>
+</html>

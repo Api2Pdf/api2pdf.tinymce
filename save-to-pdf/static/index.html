@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+  <script>
+    tinymce.init({
+      selector:'textarea',
+      plugins: 'saveToPdf',
+      toolbar: 'saveToPdf',
+      saveToPdfHandler: 'http://localhost:60407/savetopdf.ashx'
+    });
+  </script>
+</head>
+<body>
+  <textarea>Testing saveToPdf</textarea>
+</body>
+</html>

@@ -19,10 +19,19 @@ const plugin = (editor, url) => {
       xhr.onload = function() 
       {
         if (xhr.status === 200) {
-          var result = JSON.parse(xhr.responseText);          
-          window.location.href = result.pdfUrl;
-          document.body.style.cursor='default';
+          var result = JSON.parse(xhr.responseText);
 
+          if(result && result.pdfUrl)
+            window.location.href = result.pdfUrl;
+          else
+            console.log(xhr.resposneText);
+            
+          document.body.style.cursor='default';
+        }
+        else
+        {
+          document.body.style.cursor='default';
+          console.log("Error generating pdf");
         }
       };
 

@@ -1,4 +1,4 @@
-# api2pdf.tinymce (See Demo)[https://www.api2pdf.com/tinymce-save-to-pdf-plugin/]
+# api2pdf.tinymce
 TinyMCE Plugin Code for [Api2Pdf REST API](https://www.api2pdf.com/documentation) 
 
 Api2Pdf.com is a REST API for instantly generating PDF documents from HTML, URLs, Microsoft Office Documents (Word, Excel, PPT), and images. The API also supports merge / concatenation of two or more PDFs. Api2Pdf is a wrapper for popular libraries such as **wkhtmltopdf**, **Headless Chrome**, and **LibreOffice**.
@@ -8,6 +8,7 @@ This plugin adds a Save to PDF functionality to TinyMCE.  It will take the HTML 
 The plugin will add a menu option to the toolbar to Save to PDF.  It will also add an icon.
 ![image](https://user-images.githubusercontent.com/7950956/44163612-e6f02500-a091-11e8-8897-e59a4e7eafcb.png)
 ***
+- [See Demo](https://www.api2pdf.com/tinymce-save-to-pdf-plugin/)
 - [Get Started with TinyMCE CDN](#tinymce-cdn)
 - [Get Started TinyMCE Self Hosted](#tinymce-self)
 - [Handlers and API Key](#handler)

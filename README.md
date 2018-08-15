@@ -91,19 +91,19 @@ index.html assumes the sample was copied to /php/savetopdf.php
 $a2p_client = new Api2PdfLibrary('YOURAPIKEY');
 ```
 
-3. Update the saveToPdfHandler configuration in your tinymce init function
+3. Update the saveToPdfHandler configuration in your tinymce init function. [See example](https://github.com/Api2Pdf/api2pdf.tinymce/blob/master/handlers/php/index.html)
 
 ## <a name="aspnet"></a>ASP.NET Handlers and Sample Code
 1. The ASP.NET sample code makes use of the Nuget Package API2PDF.  Assuming you are building your own package you will first want to Install-Package Api2Pdf (https://github.com/Api2Pdf/api2pdf.dotnet)
 
 2. Copy the appropriate handler code
-- .NET Core (https://github.com/Api2Pdf/api2pdf.tinymce/blob/master/handlers/DotNetExamples/AspNet.Core.Mvc/Controllers/SaveToPdfController.cs)
-- ASP.NET MVC (https://github.com/Api2Pdf/api2pdf.tinymce/blob/master/handlers/DotNetExamples/AspNet.Mvc/Controllers/SaveToPdfController.cs)
-- ASP.NET ASHX Handler (https://github.com/Api2Pdf/api2pdf.tinymce/blob/master/handlers/DotNetExamples/AspNet.WebForm/SaveToPdf.ashx.cs)
+- [.NET Core](https://github.com/Api2Pdf/api2pdf.tinymce/blob/master/handlers/DotNetExamples/AspNet.Core.Mvc/Controllers/SaveToPdfController.cs)
+- [ASP.NET MVC](https://github.com/Api2Pdf/api2pdf.tinymce/blob/master/handlers/DotNetExamples/AspNet.Mvc/Controllers/SaveToPdfController.cs)
+- [ASP.NET ASHX Handler](https://github.com/Api2Pdf/api2pdf.tinymce/blob/master/handlers/DotNetExamples/AspNet.WebForm/SaveToPdf.ashx.cs)
 
 3. Regardless of which handler you copy, you will want to update this line of code with the API key you created at [api2pdf.com](https://portal.api2pdf.com/register)
 ```csharp
 var a2pClient = new Api2Pdf("YOURAPIKEY");
 ```
 
-4. Update the saveToPdfHandler configuration in your tinymce init function
+4. Update the saveToPdfHandler configuration in your tinymce init function [See example](https://github.com/Api2Pdf/api2pdf.tinymce/blob/master/handlers/DotNetExamples/AspNet.WebForm/index.html)

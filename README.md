@@ -12,9 +12,7 @@ The plugin will add a menu option to the toolbar to Save to PDF.  It will also a
 - [Get Started TinyMCE Self Hosted](#tinymce-self)
 - [Handlers and API Key](#handler)
 - [PHP Handler](#php)
-- [ASP.NET MVC](#mvc)
-- [ASP.NET Core MVC](#mvccore)
-- [ASP.NET Classic (ashx)](#ashx)
+- [ASP.NET (.NET Core, MVC, Classic ASHX)](#aspnet)
 - [FAQ](https://www.api2pdf.com/faq)
 
 
@@ -74,3 +72,38 @@ This sample HTML assumes TinyMCE is running from your local code base.  It also 
 </body>
 </html>
 ```
+
+## <a name="handler"></a>Handlers and API Key
+Whether you are using the CDN or self-hosting, you will need a server side handler to process the PDF generation request.  This handler will take your incoming HTML and send it to Api2Pdf.com for processing.
+
+1. Create an account at [portal.api2pdf.com](https://portal.api2pdf.com/register) to get your API key.
+2. Use the approproiate code example for your platform of choice [PHP Handler](#php) or [ASP.NET](#aspnet)
+3. Place your Api2Pdf API key in the handler code
+4. Update the saveToPdfHandler configuration in your tinymce init function
+
+## <a name="php"></a>PHP Handler and Sample Code
+1. Download the PHP Source code here: https://github.com/Api2Pdf/api2pdf.tinymce/tree/master/handlers/php
+api2pdf.php is the library code copied from https://github.com/Api2Pdf/api2pdf.php
+index.html assumes the sample was copied to /php/savetopdf.php
+
+2. In savetophp.php update the API key with the one you created at [api2pdf.com](https://portal.api2pdf.com/register)
+```php
+$a2p_client = new Api2PdfLibrary('YOURAPIKEY');
+```
+
+3. Update the saveToPdfHandler configuration in your tinymce init function
+
+## <a name="aspnet"></a>ASP.NET Handlers and Sample Code
+1. The ASP.NET sample code makes use of the Nuget Package API2PDF.  Assuming you are building your own package you will first want to Install-Package Api2Pdf (https://github.com/Api2Pdf/api2pdf.dotnet)
+
+2. Copy the appropriate handler code
+- .NET Core (https://github.com/Api2Pdf/api2pdf.tinymce/blob/master/handlers/DotNetExamples/AspNet.Core.Mvc/Controllers/SaveToPdfController.cs)
+- ASP.NET MVC (https://github.com/Api2Pdf/api2pdf.tinymce/blob/master/handlers/DotNetExamples/AspNet.Mvc/Controllers/SaveToPdfController.cs)
+- ASP.NET ASHX Handler (https://github.com/Api2Pdf/api2pdf.tinymce/blob/master/handlers/DotNetExamples/AspNet.WebForm/SaveToPdf.ashx.cs)
+
+3. Regardless of which handler you copy, you will want to update this line of code with the API key you created at [api2pdf.com](https://portal.api2pdf.com/register)
+```csharp
+var a2pClient = new Api2Pdf("YOURAPIKEY");
+```
+
+4. Update the saveToPdfHandler configuration in your tinymce init function
